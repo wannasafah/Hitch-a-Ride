@@ -3,7 +3,6 @@ import Logo from "../assets/image/logo1.png"
 import { Link } from "react-router-dom";
 
 function Login() {
-    
     return(
         <div className="h-screen flex justify-center items-center flex-col">
             <img className="w-4/12 mb-2" src={Logo} alt="" />
