@@ -6,15 +6,44 @@ function Signup() {
     
     return(
         <div className="h-screen flex justify-center items-center flex-col">
-            <img className="w-1/4 mb-2" src={Logo} alt="" />
-            <p className=" text-[#3D5EA3]">Hi, welcome back !</p>
-            <div className=" text-[#3D5EA3] mt-8 w-[70%]">
+            <div className=" w-[70%]">
+            <img className="w-[40%] mb-1" src={Logo} alt=""/>
+            <p className=" text-[#3D5EA3] text-[40px]">SIGN UP</p>
+            </div>
+            <div className=" text-[#3D5EA3] mt-7 w-[70%]">
+                {/* fullanme */}
                 <div className="w-full">
+                    <p className=" font-semibold">Full Name</p>
+                    <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
+                </div>
+                {/* email */}
+                <div className=" mt-2">
                     <p className=" font-semibold">Email</p>
                     <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
                 </div>
+                {/* phone number */}
+                <div className=" mt-2">
+                    <p className=" font-semibold">Phone Number</p>
+                    <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
+                </div>
+                {/* gender */}
+                <div className=" mt-2">
+                    <p className=" font-semibold">Gender</p>
+                    <select className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded">
+                        <option value="">Choose your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                {/* password */}
                 <div className=" mt-2">
                     <p className=" font-semibold">Password</p>
+                    <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
+                </div>
+                {/* confirmpassword */}
+                <div className=" mt-2">
+                    <p className=" font-semibold">Comfirm Password</p>
                     <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
                 </div>
             </div>
