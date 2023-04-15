@@ -56,7 +56,7 @@ export default function PickUp() {
               </div>
             </div>
             <div className="flex px-4 space-x-2 text-center">
-              <Link to="" className="lexend flex items-center justify-center p-2 w-1/2 border-solid border-2 rounded-sm border-[#3D5EA3] text-[#3D5EA3]">CANCEL</Link>
+              <Link to="" className="lexend flex items-center justify-center  w-1/2 border-solid border-2 rounded-sm border-[#3D5EA3] text-[#3D5EA3]">CANCEL</Link>
               <Link to="/dropOff" className="lexend flex items-center justify-center p-2 w-1/2 border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">PICK-UP</Link>
             </div>
           </div>
