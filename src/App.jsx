@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Splash from './screen/Splash'
 import Prelogin from './screen/Prelogin'
-import Login from './screen/login'
-import Signup from './screen/signup'
-import Role from './screen/role'
+import Signup from './screen/Signup'
+import Login from './screen/Login'
+import Role from './screen/Role'
 
 function App() {
 
