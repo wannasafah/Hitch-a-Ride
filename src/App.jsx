@@ -7,6 +7,7 @@ import AddJob from './screen/AddJob'
 import Signup from './screen/Signup'
 import Login from './screen/Login'
 import Role from './screen/Role'
+import PickUp from './screen/PickUp'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/booking' element = {<Booking/>}/>
         <Route path='/addJob' element = {<AddJob/>}/>
         <Route path='/role' element = {<Role/>}/>
+        <Route path='/pickup' element = {<PickUp/>}/>
       </Routes>
     </BrowserRouter>
   )

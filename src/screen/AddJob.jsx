@@ -68,7 +68,7 @@ export default function AddJob() {
               <div className="w-8 absolute text-gray-400 left-2.5 text-xl">
                 <img src={passenger} alt="" />
               </div>
-              <div className="flex justify-between h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[D2D4D6]">
+              <div className="flex justify-between h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[#D2D4D6]">
                 <div className="">Passenger</div>
                 <div className="flex space-x-4">
                   <div className="">-</div>
