@@ -12,10 +12,10 @@ function Role() {
             <img className="w-5/12 mb-3" src={Logo} alt="" />
             <p className=" text-[#3D5EA3] text-2xl">Please select user type.</p>
             <div className=" flex mt-10">
-                <Link className=" flex items-center justify-end" to="">
+                <Link className=" flex items-center justify-end" to="/booking">
                     <img src={Book} alt="Booking" className="w-[80%]"/>
                 </Link>
-                <Link className=" flex items-center ml-2" to="">
+                <Link className=" flex items-center ml-2" to="/addJob">
                     <img src={Driver} alt="Driver" className="w-[80%]"/>
                 </Link>
             </div>
