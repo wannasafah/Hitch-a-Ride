@@ -2,10 +2,11 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Splash from './screen/Splash'
 import Prelogin from './screen/Prelogin'
-import Login from './screen/login'
-import Signup from './screen/signup'
 import Booking from './screen/Booking'
 import AddJob from './screen/AddJob'
+import Signup from './screen/Signup'
+import Login from './screen/Login'
+import Role from './screen/Role'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/signup' element = {<Signup/>}/>
         <Route path='/booking' element = {<Booking/>}/>
         <Route path='/addJob' element = {<AddJob/>}/>
+        <Route path='/role' element = {<Role/>}/>
       </Routes>
     </BrowserRouter>
   )
