@@ -4,6 +4,7 @@ import Splash from './screen/Splash'
 import Prelogin from './screen/Prelogin'
 import Login from './screen/login'
 import Signup from './screen/signup'
+import Role from './screen/role'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/prelogin' element = {<Prelogin/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/signup' element = {<Signup/>}/>
+        <Route path='/role' element = {<Role/>}/>
       </Routes>
     </BrowserRouter>
   )
