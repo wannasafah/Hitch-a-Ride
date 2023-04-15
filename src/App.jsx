@@ -10,6 +10,8 @@ import Role from './screen/Role'
 import PickUp from './screen/PickUp'
 import DropOff from './screen/DropOff'
 import ChooseDriver from './screen/ChooseDriver'
+import ChatDriver from './screen/ChatDriver'
+import Notification from './screen/Notification'
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
         <Route path='/pickup' element = {<PickUp/>}/>
         <Route path='/dropOff' element = {<DropOff/>}/>
         <Route path='/chooseDriver' element = {<ChooseDriver/>}/>
+        <Route path='/chatDriver' element = {<ChatDriver/>}/>
+        <Route path='/notification' element = {<Notification/>}/>
       </Routes>
     </BrowserRouter>
   )

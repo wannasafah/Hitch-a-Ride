@@ -14,3 +14,13 @@
 .bg-map{
     background-image: url(../assets/image/map.svg);
 }
+.chat-blue{
+    background-image: url(../assets/image/chat_blue.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.chat-pink{
+    background-image: url(../assets/image/chat_pink.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
