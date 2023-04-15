@@ -80,7 +80,7 @@ export default function AddJob() {
           </div>
 
           <Link to="" className="w-5/6 text-center mt-2 lexend mb-10">
-            <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal ">
+            <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal rounded-sm ">
               ADD JOB
             </button>
           </Link>

@@ -4,6 +4,7 @@ import profile from "../assets/image/profile.svg";
 import notification from "../assets/image/notification_icon.svg";
 import message from "../assets/image/message.svg";
 import line from "../assets/image/linepoint.svg";
+import { Link } from "react-router-dom";
 export default function PickUp() {
   return (
     <div>
@@ -54,9 +55,9 @@ export default function PickUp() {
                 </div>
               </div>
             </div>
-            <div className="flex px-4 space-x-2">
-              <button className="lexend h-9 w-1/2 border-solid border-2 rounded-sm border-[#3D5EA3] text-[#3D5EA3]">CANCEL</button>
-              <button className="lexend  h-9 w-1/2 border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">PICK-UP</button>
+            <div className="flex px-4 space-x-2 text-center">
+              <Link to="" className="lexend flex items-center justify-center p-2 w-1/2 border-solid border-2 rounded-sm border-[#3D5EA3] text-[#3D5EA3]">CANCEL</Link>
+              <Link to="/dropOff" className="lexend flex items-center justify-center p-2 w-1/2 border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">PICK-UP</Link>
             </div>
           </div>
         </div>
