@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Splash from './screen/Splash'
 import Prelogin from './screen/Prelogin'
 import Login from './screen/login'
+import Signup from './screen/signup'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element = {<Splash/>}/>
         <Route path='/prelogin' element = {<Prelogin/>}/>
         <Route path='/login' element = {<Login/>}/>
+        <Route path='/signup' element = {<Signup/>}/>
       </Routes>
     </BrowserRouter>
   )

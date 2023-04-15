@@ -2,11 +2,11 @@ import React from "react";
 import Logo from "../assets/image/logo1.png"
 import { Link } from "react-router-dom";
 
-function Login() {
+function Signup() {
     
     return(
         <div className="h-screen flex justify-center items-center flex-col">
-            <img className="w-4/12 mb-2" src={Logo} alt="" />
+            <img className="w-1/4 mb-2" src={Logo} alt="" />
             <p className=" text-[#3D5EA3]">Hi, welcome back !</p>
             <div className=" text-[#3D5EA3] mt-8 w-[70%]">
                 <div className="w-full">
@@ -19,14 +19,14 @@ function Login() {
                 </div>
             </div>
             <button className="w-[70%] mt-10 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
-                    LOGIN
+                    SIGN UP
             </button>
             <div className=" absolute bottom-8">
-                <span>Don’t have an account?  </span>
-                <Link to="/signup" className="text-[#3D5EA3]">SIGN UP</Link>
+                <span>Already have any account?  </span>
+                <Link to="/signup" className="text-[#3D5EA3]">Login</Link>
             </div>
         </div>
     )
 
 }
-export default Login;
+export default Signup;
