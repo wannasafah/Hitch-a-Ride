@@ -5,7 +5,7 @@ import notification from "../assets/image/notification_icon.svg";
 import message from "../assets/image/message.svg";
 import line from "../assets/image/linepoint.svg";
 import { Link } from "react-router-dom";
-export default function PickUp() {
+export default function DropOff() {
   return (
     <div>
       <div className="flex flex-col bg-map h-screen">
@@ -38,7 +38,7 @@ export default function PickUp() {
             </div>
             <div className="p-4">
               <div className="jura text-[#a7a8aa]">Notes from passenger</div>
-              <textarea className="w-full h-16 p-2 border-solid border-2 rounded-sm text-[#3D5EA3] border-[#D2D4D6] resize-none outline-none"></textarea>
+              <textarea className="w-full h-16 p-2 border-solid border-2 rounded-sm text-[#3D5EA3] border-[#D2D4D6] resize-none outline-none "></textarea>
               <div className="flex space-x-3 justify-center items-center mt-2">
                 <div className="jura h-8 border-solid text-lg border-2 px-2 rounded-2xl text-[#b4b0b0] border-[#D2D4D6]">
                   5km
@@ -55,9 +55,12 @@ export default function PickUp() {
                 </div>
               </div>
             </div>
-            <div className="flex px-4 space-x-2 text-center">
-              <Link to="" className="lexend flex items-center justify-center  w-1/2 border-solid border-2 rounded-sm border-[#3D5EA3] text-[#3D5EA3]">CANCEL</Link>
-              <Link to="/dropOff" className="lexend flex items-center justify-center p-2 w-1/2 border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">PICK-UP</Link>
+            <div className="px-4">
+              <Link to="">
+                <div className="text-center lexend p-2 w-full border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">
+                  DROP-OFF
+                </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
 
+.junge{
+    font-family: 'Junge', serif;
+}
 .jura{
     font-family: 'Jura', sans-serif;
 }
@@ -9,4 +13,14 @@
 }
 .bg-map{
     background-image: url(../assets/image/map.svg);
+}
+.chat-blue{
+    background-image: url(../assets/image/chat_blue.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.chat-pink{
+    background-image: url(../assets/image/chat_pink.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -68,7 +68,7 @@ export default function AddJob() {
               <div className="w-8 absolute text-gray-400 left-2.5 text-xl">
                 <img src={passenger} alt="" />
               </div>
-              <div className="flex justify-between h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[D2D4D6]">
+              <div className="flex justify-between h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[#D2D4D6]">
                 <div className="">Passenger</div>
                 <div className="flex space-x-4">
                   <div className="">-</div>
@@ -80,7 +80,7 @@ export default function AddJob() {
           </div>
 
           <Link to="" className="w-5/6 text-center mt-2 lexend mb-10">
-            <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal ">
+            <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal rounded-sm ">
               ADD JOB
             </button>
           </Link>

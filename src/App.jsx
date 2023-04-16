@@ -12,6 +12,11 @@ import Cancelbook from './screen/Cancelbook'
 import Feedback from './screen/Feedback'
 import Thank from './screen/Thank'
 import Great from './screen/Great'
+import PickUp from './screen/PickUp'
+import DropOff from './screen/DropOff'
+import ChooseDriver from './screen/ChooseDriver'
+import ChatDriver from './screen/ChatDriver'
+import Notification from './screen/Notification'
 
 function App() {
 
@@ -30,6 +35,11 @@ function App() {
         <Route path='/feedback' element = {<Feedback/>}/>
         <Route path='/thankyou' element = {<Thank/>}/>
         <Route path='/greatjob' element = {<Great/>}/>
+        <Route path='/pickup' element = {<PickUp/>}/>
+        <Route path='/dropOff' element = {<DropOff/>}/>
+        <Route path='/chooseDriver' element = {<ChooseDriver/>}/>
+        <Route path='/chatDriver' element = {<ChatDriver/>}/>
+        <Route path='/notification' element = {<Notification/>}/>
       </Routes>
     </BrowserRouter>
   )
