@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/image/holder_booking.png";
+import Logo from "../assets/image/holder.png";
 import Profile from "../assets/image/somsrii.png";
 import line from "../assets/image/linepoint.svg";
 import YStar from "../assets/image/yellowstar.svg"
@@ -7,7 +7,7 @@ import GStar from "../assets/image/graystar.svg"
 import EStar from "../assets/image/starempty.png"
 import { Link } from "react-router-dom";
 
-function Cancelbook() {
+function Feedback() {
     return (
         <div className="h-screen  flex  items-center flex-col">
             {/* holder */}
@@ -92,4 +92,4 @@ function Cancelbook() {
         </div>
     );
 }
-export default Cancelbook;
+export default Feedback;
