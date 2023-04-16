@@ -13,7 +13,6 @@ function Signup() {
   const [password2, setPassword2] = useState("");
 
   function Adddata() {
-    console.log(1243);
     axios
       .post(`${path}/signup`, {
         fullname: fullname,
@@ -113,8 +112,8 @@ function Signup() {
       </div>
       <button
         className="w-[70%] mt-10 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold"
-        onClick={()=>{
-            Adddata()
+        onClick={() => {
+          Adddata();
         }}
       >
         SIGN UP
