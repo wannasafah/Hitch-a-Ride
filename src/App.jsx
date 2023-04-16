@@ -9,6 +9,7 @@ import Login from './screen/Login'
 import Role from './screen/Role'
 import Profile from './screen/Profile'
 import Cancelbook from './screen/Cancelbook'
+import Feedback from './screen/Feedback'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/role' element = {<Role/>}/>
         <Route path='/profile' element = {<Profile/>}/>
         <Route path='/cancelbooking' element = {<Cancelbook/>}/>
+        <Route path='/feedback' element = {<Feedback/>}/>
       </Routes>
     </BrowserRouter>
   )
