@@ -11,6 +11,7 @@ import Profile from './screen/Profile'
 import Cancelbook from './screen/Cancelbook'
 import Feedback from './screen/Feedback'
 import Thank from './screen/Thank'
+import Great from './screen/Great'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/cancelbooking' element = {<Cancelbook/>}/>
         <Route path='/feedback' element = {<Feedback/>}/>
         <Route path='/thankyou' element = {<Thank/>}/>
+        <Route path='/greatjob' element = {<Great/>}/>
       </Routes>
     </BrowserRouter>
   )
