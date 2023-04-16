@@ -7,6 +7,11 @@ import AddJob from './screen/AddJob'
 import Signup from './screen/Signup'
 import Login from './screen/Login'
 import Role from './screen/Role'
+import Profile from './screen/Profile'
+import Cancelbook from './screen/Cancelbook'
+import Feedback from './screen/Feedback'
+import Thank from './screen/Thank'
+import Great from './screen/Great'
 import PickUp from './screen/PickUp'
 import DropOff from './screen/DropOff'
 import ChooseDriver from './screen/ChooseDriver'
@@ -25,6 +30,11 @@ function App() {
         <Route path='/booking' element = {<Booking/>}/>
         <Route path='/addJob' element = {<AddJob/>}/>
         <Route path='/role' element = {<Role/>}/>
+        <Route path='/profile' element = {<Profile/>}/>
+        <Route path='/cancelbooking' element = {<Cancelbook/>}/>
+        <Route path='/feedback' element = {<Feedback/>}/>
+        <Route path='/thankyou' element = {<Thank/>}/>
+        <Route path='/greatjob' element = {<Great/>}/>
         <Route path='/pickup' element = {<PickUp/>}/>
         <Route path='/dropOff' element = {<DropOff/>}/>
         <Route path='/chooseDriver' element = {<ChooseDriver/>}/>
@@ -34,5 +44,6 @@ function App() {
     </BrowserRouter>
   )
 }
+
 
 export default App
