@@ -91,7 +91,7 @@ function Signup() {
         <div className=" mt-2">
           <p className=" font-semibold">Password</p>
           <input
-            type="text"
+            type="password"
             className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"
             onChange={(event) => {
               setPassword1(event.target.value);
@@ -102,7 +102,7 @@ function Signup() {
         <div className=" mt-2">
           <p className=" font-semibold">Comfirm Password</p>
           <input
-            type="text"
+            type="password"
             className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"
             onChange={(event) => {
               setPassword2(event.target.value);
