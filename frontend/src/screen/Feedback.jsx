@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}  from "react";
 import Logo from "../assets/image/holder.png";
 import Profile from "../assets/image/somsrii.png";
 import line from "../assets/image/linepoint.svg";
@@ -8,6 +8,7 @@ import EStar from "../assets/image/starempty.png";
 import { Link } from "react-router-dom";
 
 function Feedback() {
+  const [driver, setDriver] = useState(JSON.parse(localStorage.getItem("driver")))
   return (
     <div className="h-screen  flex  items-center flex-col">
       {/* holder */}
@@ -27,12 +28,13 @@ function Feedback() {
       </div>
 
       {/* profile */}
-      <div className="flex justify-center items-center space-x-3 mt-5 mb-2">
+      {driver&&(
+        <div className="flex justify-center items-center space-x-3 mt-5 mb-2">
         <div>
           <img src={Profile} alt="" className="w-[90%]" />
         </div>
         <div>
-          <p className="lexend text-[#3D5EA3] font-medium text-xl">Somsri, jang</p>
+          <p className="lexend text-[#3D5EA3] font-medium text-xl">{driver.fullname}</p>
 
           {/* cartype */}
           <p className="jura text-[#848181] mt-2">Car Type</p>
@@ -42,9 +44,10 @@ function Feedback() {
           <p className="jura text-[#3D5EA3] mb-2">SJA345G</p>
           {/* phone number */}
           <p className="jura text-[#848181]">Phone number</p>
-          <p className="jura text-[#3D5EA3]">+66821851893</p>
+          <p className="jura text-[#3D5EA3]">+66{driver.phone.slice(1,10)}</p>
         </div>
       </div>
+      )}
 
       {/* note */}
       <div className=" w-full   flex justify-center items-center flex-col">

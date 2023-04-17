@@ -43,7 +43,7 @@ function Login() {
         <div className=" mt-3 space-y-3">
           <p className=" font-semibold">Password</p>
           <input
-            type="text"
+            type="password"
             className="outline-none w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"
             onChange={(event) => {
               setPassword(event.target.value);

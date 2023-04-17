@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../assets/image/logo1.png";
 import profile from "../assets/image/profile.svg";
 import notification from "../assets/image/notification_icon.svg";
@@ -6,6 +6,7 @@ import message from "../assets/image/message.svg";
 import line from "../assets/image/linepoint.svg";
 import { Link } from "react-router-dom";
 export default function PickUp() {
+  const [driver, setDriver] = useState(JSON.parse(localStorage.getItem("driver")))
   return (
     <div>
       <div className="flex flex-col bg-map h-screen">
@@ -24,14 +25,16 @@ export default function PickUp() {
         <div className="h-full w-full flex justify-center items-center">
           <div className=" h-2/5 w-11/12 bg-white absolute bottom-10 border-solid border-2 border-[#b4b0b0]">
             <div className="flex justify-between h-22 p-3 border-solid border-b-2 border-[#D2D4D6]">
+            {driver&&(
               <div className="flex flex-col space-y-1 pl-2">
-                <div className="lexend text-xl text-[#3D5EA3]">
-                  Somsri, jang
-                </div>
-                <div className="jura font-semibold text-base text-[#3D5EA3]">
-                  +66812345678
-                </div>
+              <div className="lexend text-xl text-[#3D5EA3]">
+              {driver.fullname}
               </div>
+              <div className="jura font-semibold text-base text-[#3D5EA3]">
+                +66{driver.phone.slice(1,10)}
+              </div>
+            </div>
+            )}
               <Link to="/chatDriver" className="p-2">
                 <img src={message} alt="" />
               </Link>

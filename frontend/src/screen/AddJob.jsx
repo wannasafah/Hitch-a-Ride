@@ -3,20 +3,43 @@ import logo from "../assets/image/logo1.png";
 import profile from "../assets/image/profile.svg";
 import notification from "../assets/image/notification_icon.svg";
 import passenger from "../assets/image/passenger_icon.svg";
-import time from "../assets/image/time_icon.svg";
-
+import times from "../assets/image/time_icon.svg";
+import path from "../../path";
 import "../css/map.css";
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
+import axios from "axios";
 export default function AddJob() {
   const [count, setCount] = useState(1);
-
+  const [location, setLocation] = useState("");
+  const [destination, setDestination] = useState("");
+  const [time, setTime] = useState("")
+  function addWork() {
+    localStorage.setItem("time-pickup", time)
+    axios
+      .post(`${path}/addWork`, {
+        user_id: localStorage.getItem("id"),
+        location: location,
+        destination: destination,
+        passenger: count,
+        role: "driver",
+      })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.setItem("location", location)
+        localStorage.setItem("destination", destination)
+        window.location.replace("/notification")
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   return (
     <div className="flex flex-col bg-map h-screen justify-center">
       <div className="h-full absolute flex-col w-full flex items-center justify-center">
         <div className="time-modal hidden flex flex-col py-4 items-center w-2/3 bg-white rounded-md border-solid border-2 border-[#D2D4D6] text-[#3D5EA3] space-y-4">
           <div className="flex justify-between border-b-2 w-full text-center px-4 pb-3">
             <div className="lexend text-[#3D5EA3] text-2xl px-2 ">
-              Pick-up time
+          Pick-up time
             </div>
             <div
               onClick={() => {
@@ -27,21 +50,22 @@ export default function AddJob() {
               X
             </div>
           </div>
+
           <div className="jura flex py-2 space-x-2 ">
             <input
               type="text"
-              className="text-5xl w-16 outline-none"
+              className="hour text-5xl w-16 outline-none"
               placeholder="00"
               maxLength={2}
             />
             <div className="text-5xl">:</div>
             <input
               type="text"
-              className="text-5xl w-16 outline-none"
+              className="min text-5xl w-16 outline-none"
               placeholder="00"
               maxLength={2}
             />
-            <select className="text-2xl outline-none" name="" id="">
+            <select className="period-time text-2xl outline-none" name="" id="">
               <option value="am">am</option>
               <option value="pm">pm</option>
             </select>
@@ -50,6 +74,7 @@ export default function AddJob() {
             <button
               onClick={() => {
                 document.querySelector(".time-modal").classList.add("hidden");
+                setTime(document.querySelector('.hour').value +" : "+ document.querySelector('.min').value +" "+ document.querySelector('.period-time').value)
               }}
               className="mt-3"
             >
@@ -86,6 +111,9 @@ export default function AddJob() {
               <input
                 className="text=[#3D5EA3] location h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
                 placeholder="Enter Your location"
+                onChange={(e) => {
+                  setLocation(e.target.value);
+                }}
               ></input>
             </div>
           </div>
@@ -103,6 +131,9 @@ export default function AddJob() {
               <input
                 className="text=[#3D5EA3] destination h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
                 placeholder="Enter Your destination"
+                onChange={(e) => {
+                  setDestination(e.target.value);
+                }}
               ></input>
             </div>
           </div>
@@ -113,7 +144,7 @@ export default function AddJob() {
             <div className="h-12 border-solid border-4 border-l border-[#848181]"></div>
             <div className="relative w-full flex items-center jura">
               <div className="w-8 absolute text-gray-400 left-3 text-xl">
-                <img src={time} alt="" />
+                <img src={times} alt="" />
               </div>
               <div
                 onClick={() => {
@@ -123,7 +154,7 @@ export default function AddJob() {
                 }}
                 className="h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
               >
-                Pick-up time
+                {time?time:"Pick-up time"}
               </div>
             </div>
           </div>
@@ -160,8 +191,13 @@ export default function AddJob() {
             </div>
           </div>
 
-          <Link to="/notification" className=" z-10 w-5/6 text-center mt-2 lexend mb-10">
-            <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal rounded-sm ">
+          <Link className=" z-10 w-5/6 text-center mt-2 lexend mb-10">
+            <button
+              onClick={() => {
+                addWork();
+              }}
+              className="bg-[#3D5EA3] w-full p-2 text-white font-normal rounded-sm "
+            >
               ADD JOB
             </button>
           </Link>

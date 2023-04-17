@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Logo from "../assets/image/holder_booking.png";
 import Profile from "../assets/image/somsrii.png";
 import line from "../assets/image/linepoint.svg";
@@ -8,19 +8,21 @@ import message from "../assets/image/message.svg";
 import { Link } from "react-router-dom";
 
 function Cancelbook() {
+  const [driver, setDriver] = useState(JSON.parse(localStorage.getItem("driver")))
   return (
     <div className="h-screen  flex  items-center flex-col">
       {/* holder */}
       <img className="w-full" src={Logo} alt="" />
 
       {/* profile */}
-      <div className="flex space-x-4 justify-center items-center mt-5 mb-4">
+      {driver&&(
+        <div className="flex space-x-4 justify-center items-center mt-5 mb-4">
         <div>
           <img src={Profile} alt="" className="w-[90%]" />
         </div>
         <div>
           <p className="lexend text-[#3D5EA3] font-medium text-xl">
-            Somsri, jang
+            {driver.fullname}
           </p>
           <div className=" flex">
             <img src={YStar} alt="" className=" mr-[1px]" />
@@ -42,9 +44,10 @@ function Cancelbook() {
           <p className="jura text-[#3D5EA3] mb-2">SJA345G</p>
           {/* phone number */}
           <p className="jura text-[#848181]">Phone number</p>
-          <p className="jura text-[#3D5EA3]">+66821851893</p>
+          <p className="jura text-[#3D5EA3]">+66{driver.phone.slice(1,10)}</p>
         </div>
       </div>
+      )}
 
       {/* note */}
       <div className=" w-full flex justify-center items-center flex-col">
