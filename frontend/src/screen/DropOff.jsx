@@ -32,13 +32,13 @@ export default function DropOff() {
                   +66812345678
                 </div>
               </div>
-              <div className="p-2">
+              <Link to="/chatDriver" className="p-2">
                 <img src={message} alt="" />
-              </div>
+              </Link>
             </div>
             <div className="p-4">
               <div className="jura text-[#a7a8aa]">Notes from passenger</div>
-              <textarea className="w-full h-16 p-2 border-solid border-2 rounded-sm text-[#3D5EA3] border-[#D2D4D6] resize-none outline-none "></textarea>
+              <textarea disabled className="w-full h-16 p-2 border-solid border-2 rounded-sm text-[#3D5EA3] border-[#D2D4D6] resize-none outline-none "></textarea>
               <div className="flex space-x-3 justify-center items-center mt-2">
                 <div className="jura h-8 border-solid text-lg border-2 px-2 rounded-2xl text-[#b4b0b0] border-[#D2D4D6]">
                   5km
@@ -56,7 +56,7 @@ export default function DropOff() {
               </div>
             </div>
             <div className="px-4">
-              <Link to="">
+              <Link to="/greatjob">
                 <div className="text-center lexend p-2 w-full border-solid border-2 rounded-sm bg-[#FFCAC1] border-[#3D5EA3] text-[#3D5EA3]">
                   DROP-OFF
                 </div>

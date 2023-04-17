@@ -10,10 +10,10 @@ function Profile() {
             <img className="w-full top-0 absolute" src={Logo} alt="" />
 
             {/* form */}
-            <div className=" w-full   flex justify-center items-center flex-col absolute bottom-[13%]">
-            <div className=" text-[#3D5EA3] mt-8 w-[70%]">
+            <div className=" w-full   flex justify-center items-center flex-col absolute bottom-[12%]">
+            <div className="jura space-y-5 text-[#3D5EA3] mt-8 w-[70%]">
                 <div className="w-full">
-                    <p className=" font-semibold">Full Name</p>
+                    <p className="font-semibold">Full Name</p>
                     <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
                 </div>
                 <div className=" mt-2">
@@ -29,9 +29,11 @@ function Profile() {
                     <input type="text" className="w-full pl-2 py-1 border-[0.5px] border-[#3D5EA3] rounded"/>
                 </div>
             </div>
-            <button className="w-[70%] mt-10 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
-                    EDIT
-            </button>
+            <Link to="/prelogin" className="lexend text-center w-[70%] mt-9 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
+                    LOGOUT
+            </Link>
+            
+            
             </div>
         </div>
     )

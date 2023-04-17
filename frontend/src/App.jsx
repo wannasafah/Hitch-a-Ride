@@ -17,6 +17,7 @@ import DropOff from './screen/DropOff'
 import ChooseDriver from './screen/ChooseDriver'
 import ChatDriver from './screen/ChatDriver'
 import Notification from './screen/Notification'
+import ChatPassenger from './screen/ChatPassenger'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/chooseDriver' element = {<ChooseDriver/>}/>
         <Route path='/chatDriver' element = {<ChatDriver/>}/>
         <Route path='/notification' element = {<Notification/>}/>
+        <Route path='/chatPassenger' element = {<ChatPassenger/>}/>
       </Routes>
     </BrowserRouter>
   )

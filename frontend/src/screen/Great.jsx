@@ -26,11 +26,11 @@ function Great() {
 
 
             {/* note */}
-            <div className=" w-full   flex justify-center items-center flex-col absolute bottom-16">
+            <Link to="/prelogin" className=" w-full   flex justify-center items-center flex-col absolute bottom-16">
                 <button className="w-[80%] bg-[#FFCAC1] mt-4 text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
                     DONE
                 </button>
-            </div>
+            </Link>
         </div>
     );
 }

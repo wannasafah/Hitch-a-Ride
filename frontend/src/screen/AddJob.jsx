@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/image/logo1.png";
 import profile from "../assets/image/profile.svg";
 import notification from "../assets/image/notification_icon.svg";
@@ -8,8 +8,56 @@ import time from "../assets/image/time_icon.svg";
 import "../css/map.css";
 import { Link } from "react-router-dom";
 export default function AddJob() {
+  const [count, setCount] = useState(1);
+
   return (
-    <div className="flex flex-col bg-map h-screen">
+    <div className="flex flex-col bg-map h-screen justify-center">
+      <div className="h-full absolute flex-col w-full flex items-center justify-center">
+        <div className="time-modal hidden flex flex-col py-4 items-center w-2/3 bg-white rounded-md border-solid border-2 border-[#D2D4D6] text-[#3D5EA3] space-y-4">
+          <div className="flex justify-between border-b-2 w-full text-center px-4 pb-3">
+            <div className="lexend text-[#3D5EA3] text-2xl px-2 ">
+              Pick-up time
+            </div>
+            <div
+              onClick={() => {
+                document.querySelector(".time-modal").classList.add("hidden");
+              }}
+              className="end lexend text-[#D2D4D6] rounded-4xl"
+            >
+              X
+            </div>
+          </div>
+          <div className="jura flex py-2 space-x-2 ">
+            <input
+              type="text"
+              className="text-5xl w-16 outline-none"
+              placeholder="00"
+              maxLength={2}
+            />
+            <div className="text-5xl">:</div>
+            <input
+              type="text"
+              className="text-5xl w-16 outline-none"
+              placeholder="00"
+              maxLength={2}
+            />
+            <select className="text-2xl outline-none" name="" id="">
+              <option value="am">am</option>
+              <option value="pm">pm</option>
+            </select>
+          </div>
+          <div className="flex  justify-center lexend border-t-2 w-full rounded-s-sm text-center">
+            <button
+              onClick={() => {
+                document.querySelector(".time-modal").classList.add("hidden");
+              }}
+              className="mt-3"
+            >
+              DONE
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-between p-6 space-x-3 bg-white">
         <div className="w-24">
           <img src={logo} alt="" />
@@ -27,11 +75,16 @@ export default function AddJob() {
           <div className="flex w-5/6 ">
             <div className="h-12 border-solid border-4 border-l border-[#3D5EA3]"></div>
             <div className="relative w-full flex items-center jura">
-              <div className="w-8 absolute text-gray-400 right-0 text-xl">
+              <div
+                onClick={() => {
+                  document.querySelector(".location").value = "";
+                }}
+                className="w-8 absolute text-gray-400 right-0 text-xl"
+              >
                 x
               </div>
               <input
-                className="h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
+                className="text=[#3D5EA3] location h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
                 placeholder="Enter Your location"
               ></input>
             </div>
@@ -39,11 +92,16 @@ export default function AddJob() {
           <div className="flex w-5/6">
             <div className="h-12 border-solid border-4 border-l border-[#4F878F]"></div>
             <div className="relative w-full flex items-center jura">
-              <div className="w-8 absolute text-gray-400 right-0 text-xl">
+              <div
+                onClick={() => {
+                  document.querySelector(".destination").value = "";
+                }}
+                className="w-8 absolute text-gray-400 right-0 text-xl"
+              >
                 x
               </div>
               <input
-                className="h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
+                className="text=[#3D5EA3] destination h-12 p-3 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
                 placeholder="Enter Your destination"
               ></input>
             </div>
@@ -57,7 +115,14 @@ export default function AddJob() {
               <div className="w-8 absolute text-gray-400 left-3 text-xl">
                 <img src={time} alt="" />
               </div>
-              <div className="h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none">
+              <div
+                onClick={() => {
+                  document
+                    .querySelector(".time-modal")
+                    .classList.remove("hidden");
+                }}
+                className="h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[D2D4D6] outline-none"
+              >
                 Pick-up time
               </div>
             </div>
@@ -71,15 +136,31 @@ export default function AddJob() {
               <div className="flex justify-between h-12 p-3 pl-9 w-full bg-white border-solid border-2 border-[#D2D4D6]">
                 <div className="">Passenger</div>
                 <div className="flex space-x-4">
-                  <div className="">-</div>
-                  <div className="">1</div>
-                  <div className="">+</div>
+                  <div
+                    className=""
+                    onClick={() => {
+                      if (count > 1) {
+                        setCount(count - 1);
+                      }
+                    }}
+                  >
+                    -
+                  </div>
+                  <div className="">{count}</div>
+                  <div
+                    className=""
+                    onClick={() => {
+                      setCount(count + 1);
+                    }}
+                  >
+                    +
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <Link to="" className="w-5/6 text-center mt-2 lexend mb-10">
+          <Link to="/notification" className=" z-10 w-5/6 text-center mt-2 lexend mb-10">
             <button className="bg-[#3D5EA3] w-full p-2 text-white font-normal rounded-sm ">
               ADD JOB
             </button>
