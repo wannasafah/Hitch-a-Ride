@@ -13,11 +13,11 @@ function Thank() {
             {/* holder */}
             <img className="w-full absolute top-0" src={Logo} alt="" />
 
-            <p className="mt-20 text-4xl font-semibold text-[#3D5EA3]">
+            <p className="lexend mt-20 text-4xl font-semibold text-[#3D5EA3]">
                 Thank You
             </p>
 
-            <div className="mt-4 text-[#3D5EA3] text-xl flex flex-col justify-center items-center">
+            <div className="junge mt-4 text-[#3D5EA3] text-xl flex flex-col justify-center items-center">
                 <p>
                     Your feedback will improve our
                 </p>
@@ -36,9 +36,9 @@ function Thank() {
 
             {/* note */}
             <div className=" w-full   flex justify-center items-center flex-col absolute bottom-16">
-                <button className="w-[80%] bg-[#FFCAC1] mt-4 text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
+                <Link to="/prelogin" className="lexend text-center w-[80%] bg-[#FFCAC1] mt-4 text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold">
                     DONE
-                </button>
+                </Link>
             </div>
         </div>
     );

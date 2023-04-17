@@ -19,8 +19,45 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+.blue-chat{
+    background-image: url(../assets/image/blue_chat.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .chat-pink{
     background-image: url(../assets/image/chat_pink.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
+.pink-chat{
+    background-image: url(../assets/image/pink_chat.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+ }
+ .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+  }
+  .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .rating > span {
+    display: inline-block;
+    position: relative;
+    width: .9em;
+  }
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+  }

@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../assets/image/logo1.png";
 import profile from "../assets/image/profile.svg";
-import passenger from "../assets/image/passenger_chat.svg";
+import driver from "../assets/image/driver_chat.svg";
 import sent from "../assets/image/sent.svg";
 import notification from "../assets/image/notification_icon.svg";
-export default function chatDriver() {
+export default function chatPassenger() {
   return (
     <div>
       <div className="flex flex-col bg-map h-screen">
@@ -27,15 +27,16 @@ export default function chatDriver() {
                 Choose your driver
               </div>
             </div>
-            <div className="p-4 space-x-4 flex">
-              <img src={passenger} alt="" />
-              <div className="jura chat-blue w-48 font-semibold text-[#3D5EA3] text-center p-0.5">
-                234/456 soi 15/1 naka
+            
+            <div className="relative h-10 mt-5">
+              <div className="jura pink-chat h-10 w-48 font-semibold text-[#3D5EA3] text-center p-0.5 absolute right-6">
+              234/456 soi 15/1 naka
               </div>
             </div>
-            <div className="relative">
-              <div className="jura chat-pink h-10 w-48 font-semibold text-[#3D5EA3] text-center p-0.5 absolute right-0">
-                I’m here.
+            <div className="p-4 space-x-2 flex ">
+              <img src={driver} alt="" />
+              <div className="jura blue-chat w-28 font-semibold text-[#3D5EA3] text-center p-0.5">
+              I’m here.
               </div>
             </div>
             <div className="flex w-full p-3 h-16 border-t-2 border-[#D2D4D6] absolute bottom-0 justify-center items-center">
@@ -52,5 +53,5 @@ export default function chatDriver() {
         </div>
       </div>
     </div>
-  );
+  )
 }

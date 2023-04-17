@@ -36,9 +36,9 @@ function Signup() {
     <div className="h-screen flex justify-center items-center flex-col">
       <div className=" w-[70%]">
         <img className="w-[40%] mb-1" src={Logo} alt="" />
-        <p className=" text-[#3D5EA3] text-[40px]">SIGN UP</p>
+        <p className="junge text-[#3D5EA3] text-[40px]">SIGN UP</p>
       </div>
-      <div className=" text-[#3D5EA3] mt-7 w-[70%]">
+      <div className="jura space-y-4 text-[#3D5EA3] mt-7 w-[70%]">
         {/* fullname */}
         <div className="w-full">
           <p className=" font-semibold">Full Name</p>
@@ -111,20 +111,21 @@ function Signup() {
         </div>
       </div>
       <button
-        className="w-[70%] mt-10 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold"
+        className="w-[70%] mt-8 bg-[#FFCAC1] text-lg py-1 rounded border-[0.5px] border-[#3D5EA3] text-[#3D5EA3] font-semibold"
         onClick={() => {
           Adddata();
         }}
       >
         SIGN UP
       </button>
-      <div className=" absolute bottom-8">
+      <div className="jura absolute bottom-8">
         <span>Already have any account? </span>
-        <Link to="/signup" className="text-[#3D5EA3]">
-          Login
+        <Link to="/login" className=" font-semibold text-[#3D5EA3]">
+          LOGIN
         </Link>
       </div>
     </div>
+    
   );
 }
 export default Signup;

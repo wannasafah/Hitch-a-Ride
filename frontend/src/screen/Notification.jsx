@@ -4,6 +4,7 @@ import profile from "../assets/image/profile.svg";
 import user from "../assets/image/passenger_noti.svg";
 import line from "../assets/image/linepoint.svg";
 import notification from "../assets/image/notification_icon.svg";
+import { Link } from "react-router-dom";
 export default function Notification() {
   return (
     <div>
@@ -24,10 +25,10 @@ export default function Notification() {
           <div className="flex flex-col w-11/12 h-full border-solid border-2 border-[#D2D4D6] bg-white">
             <div className="flex justify-center items-center border-b-2 border border-[#D2D4D6]">
               <div className="junge p-5 text-xl font-semibold text-[#3D5EA3]">
-                Choose your driver
+                Notification
               </div>
             </div>
-            <div className="p-4 space-x-4 flex border-b-2 border-[#D2D4D6]">
+            <Link to="/pickup" className="p-4 space-x-4 flex border-b-2 border-[#D2D4D6]">
               <img src={user} className="w-12 ml-3" alt="" />
               <div className="flex flex-col space-y-1">
                 <div className="lexend  text-[#3D5EA3] font-">
@@ -41,7 +42,7 @@ export default function Notification() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
