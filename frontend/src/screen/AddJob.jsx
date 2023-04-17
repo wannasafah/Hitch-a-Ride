@@ -184,7 +184,7 @@ export default function AddJob() {
                       setCount(count + 1);
                     }}
                   >
-                    +
+                    + 
                   </div>
                 </div>
               </div>
